@@ -21,7 +21,7 @@ the :doc:`Native Query <../reference/native-sql>` chapter.
 The DQL Parser has hooks to register functions that can then be
 used in your DQL queries and transformed into SQL, allowing to
 extend Doctrines Query capabilities to the vendors strength. This
-post explains the Used-Defined Functions API (UDF) of the Dql
+post explains the User-Defined Functions API (UDF) of the Dql
 Parser and shows some examples to give you some hints how you would
 extend DQL.
 
@@ -53,13 +53,24 @@ DQL query. ``$class`` is a string of a class-name which has to
 extend ``Doctrine\ORM\Query\Node\FunctionNode``. This is a class
 that offers all the necessary API and methods to implement a UDF.
 
+Instead of providing the function class name, you can also provide
+a callable that returns the function object:
+
+.. code-block:: php
+
+    <?php
+    $config = new \Doctrine\ORM\Configuration();
+    $config->addCustomStringFunction($name, function () {
+        return new MyCustomFunction();
+    });
+
 In this post we will implement some MySql specific Date calculation
 methods, which are quite handy in my opinion:
 
 Date Diff
 ---------
 
-`Mysql's DateDiff function <http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_datediff>`_
+`Mysql's DateDiff function <https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_datediff>`_
 takes two dates as argument and calculates the difference in days
 with ``date1-date2``.
 
@@ -121,7 +132,7 @@ dql statement.
 
 The ``ArithmeticPrimary`` method call is the most common
 denominator of valid EBNF tokens taken from the
-`DQL EBNF grammar <http://www.doctrine-project.org/documentation/manual/2_0/en/dql-doctrine-query-language#ebnf>`_
+`DQL EBNF grammar <http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/dql-doctrine-query-language.html#ebnf>`_
 that matches our requirements for valid input into the DateDiff Dql
 function. Picking the right tokens for your methods is a tricky
 business, but the EBNF grammar is pretty helpful finding it, as is
@@ -153,7 +164,7 @@ Date Add
 
 Often useful it the ability to do some simple date calculations in
 your DQL query using
-`MySql's DATE\_ADD function <http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_date-add>`_.
+`MySql's DATE_ADD function <https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-add>`_.
 
 I'll skip the blah and show the code for this function:
 
@@ -235,6 +246,6 @@ vendor sql functions and extend the DQL languages scope.
 
 Code for this Extension to DQL and other Doctrine Extensions can be
 found
-`in my Github DoctrineExtensions repository <http://github.com/beberlei/DoctrineExtensions>`_.
+`in the GitHub DoctrineExtensions repository <http://github.com/beberlei/DoctrineExtensions>`_.
 
 

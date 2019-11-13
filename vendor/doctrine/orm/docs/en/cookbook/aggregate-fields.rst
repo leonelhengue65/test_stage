@@ -149,7 +149,7 @@ collection, which means we can compute this value at runtime:
         public function getBalance()
         {
             $balance = 0;
-            foreach ($this->entries AS $entry) {
+            foreach ($this->entries as $entry) {
                 $balance += $entry->getAmount();
             }
             return $balance;
@@ -322,7 +322,7 @@ The aggregate field ``Account::$balance`` is now -200, however the
 SUM over all entries amounts yields -400. A violation of our max
 credit rule.
 
-You can use both optimistic or pessimistic locking to save-guard
+You can use both optimistic or pessimistic locking to safe-guard
 your aggregate fields against this kind of race-conditions. Reading
 Eric Evans DDD carefully he mentions that the "Aggregate Root"
 (Account in our example) needs a locking mechanism.
@@ -332,7 +332,7 @@ Optimistic locking is as easy as adding a version column:
 .. code-block:: php
 
     <?php
-    class Amount
+    class Account
     {
         /** @Column(type="integer") @Version */
         private $version;

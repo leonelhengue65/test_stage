@@ -6,18 +6,19 @@ $_start = microtime(true);
 require __DIR__ . '/header.php';
 
 use Genesis as g;
+use paiement\ModulePaiement\Controller\MonetbilController;
 use Request as R;
 
 header("Access-Control-Allow-Origin: *");
 
-$productCtrl = new ProductController();
+$agrCtrl= new AgregateurController();
 
 (new Request('hello'));
 
 switch (Request::get('path')) {
 
-    case 'product.list':
-        g::json_encode($productCtrl->listdata());
+    case 'test.webservice':
+        g::json_encode(MonetbilController::key());
         break;
 
     default :

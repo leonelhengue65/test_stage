@@ -1,8 +1,8 @@
 <?php
                 
-define('PROJECT_NAME', 'devupstuto');
+define('PROJECT_NAME', 'test');
 
-define ('dbname', 'devupstest2_bd');
+define ('dbname', 'test');
 //define ('dbname', 'devupstest_bd');
 //define ('dbname', 'devupstuto_bd');
 define ('dbuser', 'root');
@@ -17,10 +17,10 @@ define ('dbhost',  'localhost');
 define('__v', '4.3');
 
 define('__server', 'http://127.0.0.1');
-define('__env', __server.'/devupstuto/');
+define('__env', __server.'/test/');
 define('__prod', false);
 define('__default_lang', "fr");
-define('__project_id', 'devupstuto');
+define('__project_id', 'test');
 define('__lang', 'en');
 
 

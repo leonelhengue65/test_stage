@@ -1,0 +1,1 @@
+{"name":"agregateur","attribut":{"1":{"name":"nom","datatype":"string","size":"255","nullable":"not","formtype":"text"},"2":{"name":"reference","datatype":"string","size":"255","nullable":"not","formtype":"text"}},"relation":[]}

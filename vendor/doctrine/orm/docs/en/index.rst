@@ -13,11 +13,11 @@ If this documentation is not helping to answer questions you have about
 Doctrine ORM don't panic. You can get help from different sources:
 
 -  There is a :doc:`FAQ <reference/faq>` with answers to frequent questions.
--  The `Doctrine Mailing List <http://groups.google.com/group/doctrine-user>`_
--  Internet Relay Chat (IRC) in #doctrine on Freenode
--  Report a bug on `JIRA <http://www.doctrine-project.org/jira>`_.
+-  The `Doctrine Mailing List <https://groups.google.com/group/doctrine-user>`_
+-  Slack chat room `#orm <https://www.doctrine-project.org/slack>`_
+-  Report a bug on `GitHub <https://github.com/doctrine/orm/issues>`_.
 -  On `Twitter <https://twitter.com/search/%23doctrine2>`_ with ``#doctrine2``
--  On `StackOverflow <http://stackoverflow.com/questions/tagged/doctrine2>`_
+-  On `StackOverflow <https://stackoverflow.com/questions/tagged/doctrine-orm>`_
 
 If you need more structure over the different topics you can browse the :doc:`table
 of contents <toc>`.
@@ -65,29 +65,37 @@ Working with Objects
 Advanced Topics
 ---------------
 
-  * :doc:`Architecture <reference/architecture>`
-  * :doc:`Advanced Configuration <reference/advanced-configuration>`
-  * :doc:`Limitations and knowns issues <reference/limitations-and-known-issues>`
-  * :doc:`Commandline Tools <reference/tools>`
-  * :doc:`Transactions and Concurrency <reference/transactions-and-concurrency>`
-  * :doc:`Filters <reference/filters>`
-  * :doc:`NamingStrategy <reference/namingstrategy>`
-  * :doc:`Improving Performance <reference/improving-performance>` 
-  * :doc:`Caching <reference/caching>` 
-  * :doc:`Partial Objects <reference/partial-objects>` 
-  * :doc:`Change Tracking Policies <reference/change-tracking-policies>`
-  * :doc:`Best Practices <reference/best-practices>`
-  * :doc:`Metadata Drivers <reference/metadata-drivers>`
+* :doc:`Architecture <reference/architecture>`
+* :doc:`Advanced Configuration <reference/advanced-configuration>`
+* :doc:`Limitations and known issues <reference/limitations-and-known-issues>`
+* :doc:`Commandline Tools <reference/tools>`
+* :doc:`Transactions and Concurrency <reference/transactions-and-concurrency>`
+* :doc:`Filters <reference/filters>`
+* :doc:`NamingStrategy <reference/namingstrategy>`
+* :doc:`Improving Performance <reference/improving-performance>`
+* :doc:`Caching <reference/caching>`
+* :doc:`Partial Objects <reference/partial-objects>`
+* :doc:`Change Tracking Policies <reference/change-tracking-policies>`
+* :doc:`Best Practices <reference/best-practices>`
+* :doc:`Metadata Drivers <reference/metadata-drivers>`
+* :doc:`Batch Processing <reference/batch-processing>`
+* :doc:`Second Level Cache <reference/second-level-cache>`
 
 Tutorials
 ---------
 
-  * :doc:`Indexed associations <tutorials/working-with-indexed-associations>`
-  * :doc:`Extra Lazy Associations <tutorials/extra-lazy-associations>`
-  * :doc:`Composite Primary Keys <tutorials/composite-primary-keys>`
-  * :doc:`Ordered associations <tutorials/ordered-associations>`
-  * :doc:`Pagination <tutorials/pagination>`
-  * :doc:`Override Field/Association Mappings In Subclasses <tutorials/override-field-association-mappings-in-subclasses>`
+* :doc:`Indexed associations <tutorials/working-with-indexed-associations>`
+* :doc:`Extra Lazy Associations <tutorials/extra-lazy-associations>`
+* :doc:`Composite Primary Keys <tutorials/composite-primary-keys>`
+* :doc:`Ordered associations <tutorials/ordered-associations>`
+* :doc:`Pagination <tutorials/pagination>`
+* :doc:`Override Field/Association Mappings In Subclasses <tutorials/override-field-association-mappings-in-subclasses>`
+* :doc:`Embeddables <tutorials/embeddables>`
+
+Changelogs
+----------
+
+* `Upgrade <https://github.com/doctrine/doctrine2/blob/master/UPGRADE.md>`_
 
 Cookbook
 --------
@@ -95,7 +103,7 @@ Cookbook
 * **Patterns**:
   :doc:`Aggregate Fields <cookbook/aggregate-fields>` |
   :doc:`Decorator Pattern <cookbook/decorator-pattern>` |
-  :doc:`Strategy Pattern <cookbook/strategy-cookbook-introduction>` 
+  :doc:`Strategy Pattern <cookbook/strategy-cookbook-introduction>`
 
 * **DQL Extension Points**:
   :doc:`DQL Custom Walkers <cookbook/dql-custom-walkers>` |
@@ -109,9 +117,6 @@ Cookbook
   :doc:`Validation <cookbook/validation-of-entities>` |
   :doc:`Entities in the Session <cookbook/entities-in-session>` |
   :doc:`Keeping your Modules independent <cookbook/resolve-target-entity-listener>`
-
-* **Integration into Frameworks/Libraries**
-  :doc:`CodeIgniter <cookbook/integrating-with-codeigniter>`
 
 * **Hidden Gems**
   :doc:`Prefixing Table Name <cookbook/sql-table-prefixes>`

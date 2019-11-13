@@ -1,0 +1,1 @@
+{"name":"ModulePaiement","project":" paiement","listentity":[{"name":"agregateur","attribut":[{"name":"id","datatype":"integer","nullable":"not","formtype":"text"},{"name":"nom","datatype":"string","size":"255","nullable":"not","formtype":"text"},{"name":"reference","datatype":"string","size":"255","nullable":"not","formtype":"text"}],"relation":[]}]}

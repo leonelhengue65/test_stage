@@ -8,29 +8,4 @@
 
 require 'devups/ModuleAdmin/devups.moduleadmin.php';
 require 'devups/ModuleTranslate/devups.moduletranslate.php';
-
-require 'devupstuto/ModuleStock/devupstuto.modulestock.php';
-require 'devupstuto/ModuleProduct/devupstuto.moduleproduct.php';
-//
-//require 'prettycash/ModuleListe_tache/prettycash.moduleliste_tache.php';
-//require 'prettycash/ModuleTransactions/prettycash.moduletransactions.php';
-//require 'prettycash/ModuleUtilisateurs/prettycash.moduleutilisateurs.php';
-
-//require 'eventspace/Moduleeventspace/eventspace.moduleeventspace.php';
-
-//require 'eventspace/Moduleeventspace/eventspace.moduleeventspace.php';
-//require 'spacekola/ModuleUser/spacekola.moduleuser.php';
-//require 'spacekola/ModuleLocation/spacekola.modulelocation.php';
-//require 'spacekola/ModulePost/spacekola.modulepost.php';
-//require 'spacekola/ModuleRelation/spacekola.modulerelation.php';
-//require 'spacekola/ModuleKola/spacekola.modulekola.php';
-//
-//require 'edition3ag/ModuleImage/edition3ag.moduleimage.php';
-//require 'edition3ag/ModuleComicbook/edition3ag.modulecomicbook.php';
-//require 'edition3ag/ModuleComment/edition3ag.modulecomment.php';
-////require 'edition3ag/ModuleNotification/edition3ag.modulenotification.php';
-//require 'edition3ag/ModuleRessource/edition3ag.moduleressource.php';
-//require 'edition3ag/ModuleTranslation/edition3ag.moduletranslation.php';
-
-
-
+require  'paiement/ModulePaiement/paiement.modulePaiement.php';
