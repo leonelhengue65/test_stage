@@ -18,7 +18,7 @@ $storage = new Storage();
 /**
  * update
  */
-//$storage->__update();
+    //$storage->__update();
 
 // for both, you can also use the save method,
 // this method check if the id has a good value the update or insert if not

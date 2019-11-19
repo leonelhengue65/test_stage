@@ -109,29 +109,11 @@ class AgregateurController extends Controller{
     }
 
 
-
-    public static function count(){
-        return Agregateur::count();
-    }
-
-
     public function route($agregateur){
         ob_start();
         switch ($agregateur){
             case 'monetbil':
                 $this->monetbil();
-                break;
-            case 'dohone':
-                $this->dohone();
-                break;
-            case 'wecashup':
-                $this->wecashup();
-                break;
-            case 'paypal':
-                $this->paypal();
-                break;
-            case 'cinetpay':
-                $this->cinetpay();
                 break;
         }
         $a=array(
@@ -139,19 +121,10 @@ class AgregateurController extends Controller{
         );
         Genesis::renderView("agregateur.template",$a);
     }
+
+
     public function monetbil(){
         Genesis::renderView("agregateur.monetbil");
     }
-    public function dohone(){
-        Genesis::renderView("agregateur.dohone", []);
-    }
-    public function wecashup(){
-        Genesis::renderView("agregateur.wecashup", []);
-    }
-    public function paypal(){
-        Genesis::renderView("agregateur.paypal", []);
-    }
-    public function cinetpay(){
-        Genesis::renderView("agregateur.cinetpay", []);
-    }
+
 }

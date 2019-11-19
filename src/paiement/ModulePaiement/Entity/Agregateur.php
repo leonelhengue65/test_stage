@@ -18,10 +18,30 @@
          * @Column(name="reference", type="string" , length=255 )
          * @var string
          **/
-        private $reference; 
-        
+        private $reference;
+        /**
+         * @Column(name="cle", type="string" , length=255 )
+         * @var string
+         **/
+        private $cle;
 
-        
+        /**
+         * @return string
+         */
+        public function getCle()
+        {
+            return $this->cle;
+        }
+
+        /**
+         * @param string $cle
+         */
+        public function setCle($cle)
+        {
+            $this->cle = $cle;
+        }
+
+
         public function __construct($id = null){
             
                 if( $id ) { $this->id = $id; }   

@@ -1,27 +1,27 @@
-<?php
+    <?php
 
-global $_start;
-$_start = microtime(true);
+    global $_start;
+    $_start = microtime(true);
 
-require __DIR__ . '/header.php';
+    require __DIR__ . '/header.php';
 
-use Genesis as g;
-use paiement\ModulePaiement\Controller\MonetbilController;
-use Request as R;
+    use Genesis as g;
+    use paiement\ModulePaiement\Controller\MonetbilController;
+    use Request as R;
 
-header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");
 
-$agrCtrl= new AgregateurController();
+    $agrCtrl= new AgregateurController();
 
-(new Request('hello'));
+    (new Request('hello'));
 
-switch (Request::get('path')) {
+    switch (Request::get('path')) {
 
-    case 'test.webservice':
-        g::json_encode(MonetbilController::key());
-        break;
+        case 'add.cle':
+            g::json_encode(MonetbilController::cle());
+            break;
 
-    default :
-        g::json_encode(["success" => false, "message" => "404 :".Request::get('path')." page note found"]);
-        break;
-}
+        default :
+            g::json_encode(["success" => false, "message" => "404 :".Request::get('path')." page note found"]);
+            break;
+    }

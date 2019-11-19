@@ -9,7 +9,7 @@ use paiement\ModulePaiement\Controller\MonetbilController;
 
 switch (Request::get('path')) {
     case 'hello':
-        g::render('hello',['service'=>MonetbilController::getServiceKey()]);
+        g::render('hello');
         break;
 
 

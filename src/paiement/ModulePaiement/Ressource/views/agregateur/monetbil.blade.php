@@ -9,9 +9,9 @@ use paiement\ModulePaiement\Controller\MonetbilController;
         <div class="col-md-7">
             <form class="form-group" method="POST" action="" style="border: 1px solid #9de0f6;padding: 20px;height: 285px">
                 <div class="input-group mb-2" style="padding-top: 16%">
-                    <input type="text" style="height: 50px;" class="form-control" id="inlineFormInputGroup" name="service_key"  required   placeholder="service key">
+                    <input type="text" style="height: 50px;" class="key form-control" id="inlineFormInputGroup" name="service_key"  required   placeholder="service key">
                     <div class="input-group-prepend">
-                        <input type="submit" class="btn btn-primary" value="Valider">
+                        <input type="submit" class="send btn btn-primary" value="Valider">
                     </div>
                 </div><br>
                 <?php
@@ -29,3 +29,34 @@ use paiement\ModulePaiement\Controller\MonetbilController;
         </div>
     </div>
 </div>
+
+<script>
+  if(window.addEventListener){
+    window.addEventListener('load', maFonctionDeTest, false);
+}else{
+    window.attachEvent('onload', maFonctionDeTest);
+}
+
+function maFonctionDeTest()
+{
+
+    $('.send').click(function(){
+
+    $.ajax
+        ({
+              url : __env+'api/add_cle',
+              type : 'POST',
+              data :{
+                cle: $('.key').val(),
+                agr: "<?php echo Request::get('route')?>"
+                },
+              dataType : 'text',
+              success : function(code, statut){
+                console.log(code);
+              }
+        });
+
+    })
+
+}
+</script>

@@ -60,12 +60,14 @@ public $notify_url;
         return $this->return_url;
     }
 
-    public static function key(){
-
-        $key=self::getServiceKey();
-        \Response::set("key",$key);
+    public static function cle(){
+        $a=\Request::post('cle');
+        $b = \Request::post('agr');
+        \Agregateur::update(array('cle'=>$a))->where('reference','=',$b)->exec();
+        \Response::set("key",$a);
         return \Response::$data;
     }
+
 
     /**
      * @param mixed $return_url
@@ -110,9 +112,11 @@ public $notify_url;
 
     public static function url($monetbil_args = array())
     {
+        $qb = \Agregateur::select()->where("reference",'=','monetbil')->__getOne();
+        $c=$qb->getCle();
         $querydata=self::mergeArguments($monetbil_args);
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://www.monetbil.com/widget/v2.1/' . self::$service_key);
+        curl_setopt($ch, CURLOPT_URL, 'https://www.monetbil.com/widget/v2.1/' .$c);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
